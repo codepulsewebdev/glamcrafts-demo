@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlamCrafts Lenasia • Gifting, Décor & Handmade Parcels</title>
+  <meta name="description" content="GlamCrafts Lenasia: designer gift parcels, nikah & ring parcels, baby gifting, Eid décor, custom acrylic gifts and more, handcrafted in Lenasia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== ALL CSS HERE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #fcf8f2;
+      --blush: #FDECDF;
+      --ink: #2B1B2E;
+      --ink-soft: #5A4A5C;
+      --magenta: #C81E63;
+      --magenta-dk: #9E1450;
+      --amber: #E8A93E;
+      --teal: #0F8B8D;
+      --coral: #E8633E;
+      --plum: #6B2D5C;
+      --sky: #4FA3E8;
+      --pink: #F2A6C6;
+      --purple: #8E5CD9;
+      --green: #3FB878;
+      --yellow: #F4C430;
+      --wa-green: #25D366;
+      --wa-green-dk: #1DA851;
+      --font-display: "Poppins", sans-serif;
+      --font-body: "Work Sans", sans-serif;
+      --max-w: 1180px;
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --radius-sm: 8px;
+      --shadow-soft: 0 12px 30px -14px rgba(43, 27, 46, 0.28);
+      --shadow-card: 0 8px 20px -12px rgba(43, 27, 46, 0.25);
+      --header-h: 76px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-h);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+    h1,
+    h2,
+    h3 {
+      font-family: var(--font-display);
+      margin: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 12px 18px;
+      z-index: 999;
+      border-radius: 0 0 8px 0;
+    }
+    .skip-link:focus {
+      left: 0;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 2px;
+    }
+
+    .section-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 88px 24px;
+    }
+    .section-inner--narrow {
+      max-width: 720px;
+    }
+    .section-eyebrow {
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      color: var(--magenta);
+      margin: 0 0 8px;
+    }
+    .section-title {
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .section-title--center {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .section-sub {
+      color: var(--ink-soft);
+      max-width: 620px;
+      margin: 0 0 40px;
+      font-size: 1.02rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 2px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .btn-whatsapp {
+      background: var(--wa-green);
+      color: var(--cream);
+      box-shadow: 0 10px 24px -10px rgba(37, 211, 102, .55);
+    }
+    .btn-whatsapp:hover {
+      background: var(--wa-green-dk);
+    }
+    .btn-block {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .bubbles {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.25;
+      animation: floatBubble linear infinite alternate;
+      will-change: transform;
+    }
+
+    @keyframes floatBubble {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(30px, -50px) scale(1.1);
+      }
+      50% {
+        transform: translate(-20px, 30px) scale(0.9);
+      }
+      75% {
+        transform: translate(40px, -30px) scale(1.05);
+      }
+      100% {
+        transform: translate(-30px, 50px) scale(0.95);
+      }
+    }
+
+    .bubble-1 {
+      width: 120px;
+      height: 120px;
+      background: var(--sky);
+      top: 5%;
+      left: 2%;
+      animation-duration: 14s;
+      animation-delay: 0s;
+      opacity: 0.2;
+    }
+    .bubble-2 {
+      width: 60px;
+      height: 60px;
+      background: var(--pink);
+      top: 15%;
+      right: 3%;
+      animation-duration: 11s;
+      animation-delay: -2s;
+      opacity: 0.3;
+    }
+    .bubble-3 {
+      width: 90px;
+      height: 90px;
+      background: var(--yellow);
+      top: 2%;
+      right: 15%;
+      animation-duration: 16s;
+      animation-delay: -4s;
+      opacity: 0.2;
+    }
+    .bubble-4 {
+      width: 70px;
+      height: 70px;
+      background: var(--purple);
+      top: 35%;
+      left: 1%;
+      animation-duration: 13s;
+      animation-delay: -3s;
+      opacity: 0.25;
+    }
+    .bubble-5 {
+      width: 45px;
+      height: 45px;
+      background: var(--cream);
+      top: 45%;
+      right: 2%;
+      animation-duration: 10s;
+      animation-delay: -6s;
+      opacity: 0.4;
+    }
+    .bubble-6 {
+      width: 50px;
+      height: 50px;
+      background: var(--green);
+      top: 55%;
+      left: 2%;
+      animation-duration: 12s;
+      animation-delay: -8s;
+      opacity: 0.3;
+    }
+    .bubble-7 {
+      width: 100px;
+      height: 100px;
+      background: var(--sky);
+      top: 68%;
+      left: 4%;
+      animation-duration: 15s;
+      animation-delay: -5s;
+      opacity: 0.2;
+    }
+    .bubble-8 {
+      width: 65px;
+      height: 65px;
+      background: var(--pink);
+      top: 78%;
+      right: 4%;
+      animation-duration: 12s;
+      animation-delay: -10s;
+      opacity: 0.25;
+    }
+    .bubble-9 {
+      width: 55px;
+      height: 55px;
+      background: var(--purple);
+      top: 88%;
+      right: 8%;
+      animation-duration: 14s;
+      animation-delay: -7s;
+      opacity: 0.2;
+    }
+    .bubble-10 {
+      width: 80px;
+      height: 80px;
+      background: var(--yellow);
+      top: 92%;
+      left: 5%;
+      animation-duration: 13s;
+      animation-delay: -9s;
+      opacity: 0.25;
+    }
+    .bubble-11 {
+      width: 40px;
+      height: 40px;
+      background: var(--green);
+      top: 10%;
+      left: 12%;
+      animation-duration: 9s;
+      animation-delay: -1s;
+      opacity: 0.35;
+    }
+    .bubble-12 {
+      width: 75px;
+      height: 75px;
+      background: var(--cream);
+      top: 28%;
+      left: 8%;
+      animation-duration: 11s;
+      animation-delay: -5s;
+      opacity: 0.3;
+    }
+    .bubble-13 {
+      width: 55px;
+      height: 55px;
+      background: var(--purple);
+      top: 8%;
+      right: 22%;
+      animation-duration: 10s;
+      animation-delay: -3s;
+      opacity: 0.25;
+    }
+    .bubble-14 {
+      width: 85px;
+      height: 85px;
+      background: var(--pink);
+      top: 62%;
+      right: 6%;
+      animation-duration: 16s;
+      animation-delay: -11s;
+      opacity: 0.2;
+    }
+    .bubble-15 {
+      width: 48px;
+      height: 48px;
+      background: var(--sky);
+      top: 82%;
+      left: 9%;
+      animation-duration: 11s;
+      animation-delay: -6s;
+      opacity: 0.3;
+    }
+    .bubble-16 {
+      width: 95px;
+      height: 95px;
+      background: var(--yellow);
+      top: 50%;
+      left: 6%;
+      animation-duration: 14s;
+      animation-delay: -10s;
+      opacity: 0.2;
+    }
+    .bubble-17 {
+      width: 35px;
+      height: 35px;
+      background: var(--teal);
+      top: 30%;
+      right: 12%;
+      animation-duration: 8s;
+      animation-delay: -4s;
+      opacity: 0.35;
+    }
+    .bubble-18 {
+      width: 110px;
+      height: 110px;
+      background: var(--coral);
+      top: 72%;
+      left: 12%;
+      animation-duration: 17s;
+      animation-delay: -2s;
+      opacity: 0.18;
+    }
+    .bubble-19 {
+      width: 42px;
+      height: 42px;
+      background: var(--plum);
+      top: 18%;
+      left: 25%;
+      animation-duration: 10s;
+      animation-delay: -8s;
+      opacity: 0.3;
+    }
+    .bubble-20 {
+      width: 130px;
+      height: 130px;
+      background: var(--amber);
+      top: 58%;
+      right: 10%;
+      animation-duration: 18s;
+      animation-delay: -5s;
+      opacity: 0.15;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 246, 238, 0.92);
+      backdrop-filter: saturate(160%) blur(10px);
+      border-bottom: 1px solid rgba(43, 27, 46, 0.08);
+    }
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      height: var(--header-h);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-text {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.55rem;
+      color: var(--ink);
+      letter-spacing: -.01em;
+    }
+    .brand-text em {
+      font-style: normal;
+      color: var(--magenta);
+    }
+
+    .main-nav ul {
+      display: flex;
+      gap: 32px;
+    }
+    .main-nav a {
+      font-weight: 600;
+      font-size: .98rem;
+      color: var(--ink);
+      position: relative;
+      padding: 6px 0;
+      transition: color .2s ease;
+    }
+    .main-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      height: 2px;
+      background: var(--magenta);
+      transition: right .22s ease;
+    }
+    .main-nav a:hover {
+      color: var(--magenta);
+    }
+    .main-nav a:hover::after {
+      right: 0;
+    }
+
+    .header-socials {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .header-socials a {
+      display: flex;
+      transition: transform .2s ease;
+    }
+    .header-socials a:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: transparent;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    .nav-toggle span {
+      width: 22px;
+      height: 2.5px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+    .nav-toggle.open span:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+    .nav-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle.open span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 120px 24px 100px;
+      text-align: center;
+      isolation: isolate;
+      z-index: 1;
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--magenta);
+    }
+    .hero-copy {
+      font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+      color: var(--ink-soft);
+      margin: 0 auto 36px;
+      max-width: 560px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-page {
+      position: relative;
+      z-index: 1;
+      padding-top: 20px;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .about-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+    .about-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    .about-content {
+      color: var(--ink-soft);
+      font-size: 1.05rem;
+    }
+    .about-content h1,
+    .about-content h2 {
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .services {
+      position: relative;
+      z-index: 1;
+    }
+    .service-pyramid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .service-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 12px;
+    }
+    .service-word {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: clamp(.85rem, 1.2vw, .98rem);
+      color: var(--cream);
+      background: var(--magenta);
+      padding: 9px 18px;
+      border-radius: 999px;
+      cursor: default;
+      box-shadow: var(--shadow-card);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .service-row:nth-child(2) .service-word {
+      background: var(--purple);
+    }
+    .service-row:nth-child(3) .service-word {
+      background: var(--teal);
+    }
+    .service-row:nth-child(4) .service-word {
+      background: var(--coral);
+    }
+    .service-row:nth-child(5) .service-word {
+      background: var(--sky);
+    }
+    .service-row:nth-child(6) .service-word {
+      background: var(--green);
+    }
+    .service-word:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 14px 26px -12px rgba(43, 27, 46, 0.35);
+    }
+
+    .gallery {
+      position: relative;
+      z-index: 1;
+    }
+    .gallery-category {
+      margin-bottom: 56px;
+    }
+    .gallery-category:last-child {
+      margin-bottom: 0;
+    }
+    .gallery-category-head {
+      margin-bottom: 16px;
+    }
+    .gallery-category-head h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .gallery-tile {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      background: var(--cream);
+      box-shadow: var(--shadow-card);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .gallery-tile:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px -14px rgba(200, 30, 99, 0.55);
+    }
+    .gallery-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+    .gallery-tile:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-tile.see-more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--magenta), var(--plum));
+      color: var(--cream);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-align: center;
+    }
+    .gallery-tile.see-more:hover {
+      filter: brightness(1.08);
+    }
+
+    .enquiry {
+      position: relative;
+      z-index: 1;
+    }
+    .enquiry-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background: var(--cream);
+      padding: 36px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+      border: 2px solid var(--blush);
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .field label {
+      font-weight: 600;
+      font-size: .92rem;
+      color: var(--ink);
+    }
+    .field input,
+    .field select,
+    .field textarea {
+      border: 1.5px solid rgba(43, 27, 46, 0.16);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-family: inherit;
+      font-size: .98rem;
+      background: var(--cream);
+      color: var(--ink);
+      resize: vertical;
+    }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--magenta);
+      outline: none;
+    }
+    .field input:invalid,
+    .field textarea:invalid {
+      border-color: #e74c3c;
+    }
+
+    .contact {
+      position: relative;
+      z-index: 1;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+    .contact-map {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      background: var(--cream);
+      border: 2px solid var(--blush);
+    }
+    .contact-map iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      display: block;
+    }
+    .map-link {
+      display: block;
+      padding: 14px 18px;
+      font-weight: 600;
+      color: var(--magenta);
+      background: var(--cream);
+    }
+    .contact-details {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      color: var(--ink);
+      border: 2px solid var(--blush);
+    }
+    .detail-block h3 {
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--magenta);
+      margin-bottom: 8px;
+    }
+    .detail-block p,
+    .detail-block a {
+      color: var(--ink-soft);
+    }
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      font-size: .95rem;
+      color: var(--ink-soft);
+    }
+    .contact-details .btn {
+      align-self: flex-start;
+      margin-top: 6px;
+    }
+
+    .site-footer {
+      background: var(--cream);
+      color: var(--ink);
+      border-top: 2px solid var(--blush);
+      position: relative;
+      z-index: 1;
+    }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand-footer {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+    .brand-footer em {
+      font-style: normal;
+      color: var(--magenta);
+    }
+    .footer-nav {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-nav a {
+      font-weight: 500;
+      color: var(--ink);
+      opacity: .8;
+    }
+    .footer-nav a:hover {
+      opacity: 1;
+      color: var(--magenta);
+    }
+    .footer-socials {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--blush);
+      transition: transform .2s ease;
+    }
+    .footer-socials a:hover {
+      transform: translateY(-2px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(43, 27, 46, 0.1);
+      padding: 18px 24px 32px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      justify-content: space-between;
+      font-size: .9rem;
+      color: var(--ink-soft);
+    }
+    .footer-bottom .credit {
+      font-size: 1.02rem;
+      font-weight: 600;
+    }
+    .footer-bottom a {
+      text-decoration: underline;
+      color: var(--magenta);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(20, 10, 20, 0.94);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox-stage {
+      max-width: 88vw;
+      max-height: 86vh;
+      text-align: center;
+    }
+    .lightbox-stage img {
+      max-width: 88vw;
+      max-height: 78vh;
+      margin: 0 auto;
+      border-radius: var(--radius-sm);
+      object-fit: contain;
+      background: var(--cream);
+      cursor: zoom-in;
+      transition: transform .2s ease;
+    }
+    .lightbox-stage img.zoomed {
+      max-width: none;
+      max-height: none;
+      width: auto;
+      cursor: zoom-out;
+      transform: scale(1.6);
+    }
+    .lightbox-caption {
+      color: var(--cream);
+      margin-top: 14px;
+      font-weight: 600;
+    }
+    .lightbox-close,
+    .lightbox-nav {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--cream);
+      border: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .18s ease;
+    }
+    .lightbox-close:hover,
+    .lightbox-nav:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .lightbox-close {
+      top: 24px;
+      right: 24px;
+    }
+    .lightbox-prev {
+      left: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .lightbox-next {
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .cat-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 250;
+      background: var(--cream);
+      display: none;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .cat-modal.active {
+      display: flex;
+    }
+    .cat-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 28px;
+      border-bottom: 1px solid rgba(43, 27, 46, 0.1);
+      background: var(--cream);
+    }
+    .cat-modal-header h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .cat-modal-close {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(43, 27, 46, 0.08);
+      font-size: 1.5rem;
+      color: var(--ink);
+    }
+    .cat-modal-close:hover {
+      background: rgba(43, 27, 46, 0.16);
+    }
+    .cat-modal-grid {
+      overflow-y: auto;
+      padding: 24px 28px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 18px;
+    }
+    .cat-tile {
+      border: none;
+      background: none;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+    }
+    .cat-tile .cat-tile-img {
+      aspect-ratio: 1/1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: var(--cream);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .cat-tile:hover .cat-tile-img {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px -14px rgba(200, 30, 99, 0.55);
+    }
+    .cat-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .cat-tile-title {
+      margin-top: 8px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 980px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-map iframe {
+        height: 280px;
+      }
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .about-image img {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .main-nav {
+        position: fixed;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        border-bottom: 1px solid rgba(43, 27, 46, 0.08);
+        box-shadow: var(--shadow-soft);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .25s ease;
+      }
+      .main-nav.open {
+        max-height: 320px;
+      }
+      .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 24px 18px;
+      }
+      .main-nav a {
+        display: block;
+        padding: 12px 0;
+      }
+      .nav-toggle {
+        display: flex;
+      }
+      .header-socials {
+        display: none;
+      }
+
+      .section-inner {
+        padding: 64px 20px;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .service-row {
+        gap: 4px 18px;
+      }
+
+      .gallery-grid.has-more {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-grid.has-more .gallery-tile {
+        display: none;
+      }
+      .gallery-grid.has-more .gallery-tile.see-more {
+        display: flex;
+        order: 2;
+      }
+      .gallery-grid.has-more .gallery-tile:not(.see-more):first-of-type {
+        display: block;
+        order: 1;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 80px 20px 60px;
+      }
+      .enquiry-form {
+        padding: 24px;
+      }
+      .lightbox-close {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+      }
+      .lightbox-prev {
+        left: 8px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+      }
+      .lightbox-next {
+        right: 8px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+      }
+      .cat-modal-header {
+        padding: 14px 18px;
+      }
+      .cat-modal-grid {
+        padding: 16px 18px 40px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-text {
+        font-size: 1.2rem;
+      }
+      .gallery-grid.has-more {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero-copy {
+        font-size: 0.95rem;
+      }
+      .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+      .contact-details {
+        padding: 20px;
+      }
+      .cat-modal-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MOVING BUBBLES -->
+  <div class="bubbles" aria-hidden="true">
+    <div class="bubble bubble-1"></div>
+    <div class="bubble bubble-2"></div>
+    <div class="bubble bubble-3"></div>
+    <div class="bubble bubble-4"></div>
+    <div class="bubble bubble-5"></div>
+    <div class="bubble bubble-6"></div>
+    <div class="bubble bubble-7"></div>
+    <div class="bubble bubble-8"></div>
+    <div class="bubble bubble-9"></div>
+    <div class="bubble bubble-10"></div>
+    <div class="bubble bubble-11"></div>
+    <div class="bubble bubble-12"></div>
+    <div class="bubble bubble-13"></div>
+    <div class="bubble bubble-14"></div>
+    <div class="bubble bubble-15"></div>
+    <div class="bubble bubble-16"></div>
+    <div class="bubble bubble-17"></div>
+    <div class="bubble bubble-18"></div>
+    <div class="bubble bubble-19"></div>
+    <div class="bubble bubble-20"></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-text">GlanCrafts <em>Lenasia</em></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-socials">
+        <a href="https://www.facebook.com/p/Glamcrafts-lenasia-100063976486534/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/glamcraft_new/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24"><defs><linearGradient id="igGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#F58529"/><stop offset="35%" stop-color="#DD2A7B"/><stop offset="70%" stop-color="#8134AF"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><path fill="url(#igGrad)" d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.16.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43C22 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.16 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.11.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.16-1.77A4.9 4.9 0 0 1 5.46 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2 9.3 2 12 2zm0 1.8c-2.65 0-2.97.01-4.02.06-.86.04-1.33.18-1.64.3-.41.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.64C4.31 9.03 4.3 9.35 4.3 12s.01 2.97.06 4.02c.04.86.18 1.33.3 1.64.16.41.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.64.3 1.05.05 1.37.06 4.02.06s2.97-.01 4.02-.06c.86-.04 1.33-.18 1.64-.3.41-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.64.05-1.05.06-1.37.06-4.02s-.01-2.97-.06-4.02c-.04-.86-.18-1.33-.3-1.64a2.7 2.7 0 0 0-.66-1.02 2.7 2.7 0 0 0-1.02-.66c-.31-.12-.78-.26-1.64-.3C14.97 4.31 14.65 4.3 12 4.3zm0 3.4a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6zm0 1.8a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.47-2.02a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+        </a>
+        <a href="https://g.page/r/CQf7SXEIuAEXEAE/review" target="_blank" rel="noopener" aria-label="Google Reviews">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h6.46c-.28 1.5-1.13 2.77-2.4 3.62v3h3.88c2.27-2.09 3.56-5.17 3.56-8.65z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.07 7.94-2.9l-3.88-3c-1.07.72-2.45 1.15-4.06 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.11A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.27 14.29A7.2 7.2 0 0 1 4.9 12c0-.79.14-1.57.37-2.29V6.6H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.4z"/><path fill="#EA4335" d="M12 4.75c1.76 0 3.35.61 4.6 1.8l3.44-3.44C17.94 1.19 15.24 0 12 0 7.31 0 3.26 2.69 1.27 6.6l4 3.11C6.22 6.86 8.87 4.75 12 4.75z"/></svg>
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>GlamCrafts <em>Lenasia</em></h1>
+        <p class="hero-copy">GlamCrafts Lenasia is a handcrafted arts and crafts studio, designing and creating beautiful custom pieces for every celebration. From gift parcels and nikah and ring parcels to baby hampers, Eid décor and personalised keepsakes, every piece is designed with care, made by hand and finished with colour, creativity and a personal touch.</p>
+        <div class="hero-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/27785659464?text=Hi%20GlenCrafts%20Lenasia%2C%20I%27d%20like%20to%20find%20out%20more%20about%20your%20gifting%20%26%20decor." target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 0 1 6.9 12.6l-.3.5.9 3.2-3.3-.9-.5.3A8.2 8.2 0 1 1 12 3.8zm-3.4 4.3c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.1 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-2-1c-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.8-1-2.4-.2-.5-.4-.5-.6-.5z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-page" id="about">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="images/ring nikkah.jpg" alt="GlamCrafts Lenasia handcrafted ring and nikah parcels" loading="lazy" />
+          </div>
+          <div class="about-content">
+            <h2>About Us</h2>
+            <p>GlamCrafts Lenasia is a family run arts and crafts studio based in the heart of Lenasia. We specialise in designer and personalised gifting, from tissue boxes and bins to key holders and so much more, alongside custom parcels, hampers and décor for weddings, Eid, births and everyday celebrations.</p>
+            <p style="margin-top: 16px;">Everything is designed with care, handcrafted from raw materials and finished to a standard we're proud to put our name on. If you can dream it, chances are we can craft it for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <div class="section-inner">
+        <h2 class="section-title section-title--center">Services</h2>
+
+        <div class="service-pyramid">
+          <div class="service-row"><span class="service-word">Gifting</span></div>
+          <div class="service-row"><span class="service-word">Nikah Parcels</span><span class="service-word">Ring Parcels</span></div>
+          <div class="service-row"><span class="service-word">Kunchas</span><span class="service-word">Baby Gifting</span><span class="service-word">Baking</span></div>
+          <div class="service-row"><span class="service-word">Musallah Stands</span><span class="service-word">Wedding Décor</span><span class="service-word">Eid Décor</span><span class="service-word">Eid Gifting</span></div>
+          <div class="service-row"><span class="service-word">School Projects</span><span class="service-word">Parcel Boxes</span><span class="service-word">Chopping Boards</span><span class="service-word">Touchboard Frames</span></div>
+          <div class="service-row"><span class="service-word">Acrylic Items</span><span class="service-word">Custom Gifts</span><span class="service-word">Trophies</span><span class="service-word">Toys</span><span class="service-word">Decorative Items</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+      <div class="section-inner">
+        <h2 class="section-title">Gallery</h2>
+        <p class="section-sub">A look at recent parcels, hampers and décor pieces made for our customers.</p>
+        <div id="galleryCategories"></div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY FORM -->
+    <section class="enquiry" id="enquiry">
+      <div class="section-inner section-inner--narrow">
+        <h2 class="section-title">Make an Enquiry</h2>
+        <p class="section-sub">Fill in your details below and it opens straight into WhatsApp so we can chat about your order.</p>
+
+        <form id="enquiryForm" class="enquiry-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="fName">Name *</label>
+              <input type="text" id="fName" name="name" required autocomplete="given-name" />
+            </div>
+            <div class="field">
+              <label for="fSurname">Surname *</label>
+              <input type="text" id="fSurname" name="surname" required autocomplete="family-name" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="fPhone">Phone Number *</label>
+            <input type="tel" id="fPhone" name="phone" required autocomplete="tel" placeholder="e.g. 082 123 4567" />
+          </div>
+
+          <div class="field">
+            <label for="fMessage">Message *</label>
+            <textarea id="fMessage" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp btn-block">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 0 1 6.9 12.6l-.3.5.9 3.2-3.3-.9-.5.3A8.2 8.2 0 1 1 12 3.8zm-3.4 4.3c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.1 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-2-1c-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.8-1-2.4-.2-.5-.4-.5-.6-.5z"/></svg>
+            Send via WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <p class="section-eyebrow">Visit us</p>
+        <h2 class="section-title">Contact Us</h2>
+
+        <div class="contact-grid">
+          <div class="contact-map">
+            <iframe
+              title="GlenCrafts Lenasia location on Google Maps"
+              src="https://www.google.com/maps?q=Shop+no+5,+Grand+Centre+West,+Gemsbok+Street,+Lenasia,+South+Africa,+1827&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+            <a class="map-link" href="https://www.bing.com/maps/default.aspx?v=2&pc=FACEBK&mid=8100&where1=Shop%20no%205%2C%20Grand%20Centre%20West%2C%20Gemsbok%20Street%2C%20Lenasia%2C%20South%20Africa%2C%201827&FORM=FBKPL1&mkt=en-GB" target="_blank" rel="noopener">Open in Google Maps →</a>
+          </div>
+
+          <div class="contact-details">
+            <div class="detail-block">
+              <h3>Address</h3>
+              <p>Shop no 5, Grand Centre West,<br />Gemsbok Street, Lenasia,<br />South Africa, 1827</p>
+            </div>
+            <div class="detail-block">
+              <h3>Phone</h3>
+              <p><a href="tel:+27785659464">+27 78 565 9464</a></p>
+            </div>
+            <div class="detail-block">
+              <h3>Business Hours</h3>
+              <ul class="hours-list">
+                <li><span>Monday to Saturday</span><span>09:00 to 17:00</span></li>
+                <li><span>Sunday</span><span>Closed</span></li>
+              </ul>
+            </div>
+            <a class="btn btn-whatsapp" href="https://wa.me/27785659464" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 0 1 6.9 12.6l-.3.5.9 3.2-3.3-.9-.5.3A8.2 8.2 0 1 1 12 3.8zm-3.4 4.3c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.1 1.8 2.8 4.4 3.8 2.2.9 2.6.7 3.1.6.5 0 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3l-2-1c-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.8-1-2.4-.2-.5-.4-.5-.6-.5z"/></svg>
+              Message us on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="#top" class="brand brand-footer">GlamCrafts <em>Lenasia</em></a>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/p/Glamcrafts-lenasia-100063976486534/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#1877F2"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/glamcraft_new/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24"><defs><linearGradient id="igGradFoot" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#F58529"/><stop offset="35%" stop-color="#DD2A7B"/><stop offset="70%" stop-color="#8134AF"/><stop offset="100%" stop-color="#515BD4"/></linearGradient></defs><path fill="url(#igGradFoot)" d="M12 2c2.7 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.16.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43C22 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.16 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.06.05-1.42.06-4.11.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.16 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.16-1.77A4.9 4.9 0 0 1 5.46 2.53c.64-.25 1.37-.42 2.43-.47C8.94 2 9.3 2 12 2zm0 1.8c-2.65 0-2.97.01-4.02.06-.86.04-1.33.18-1.64.3-.41.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.64C4.31 9.03 4.3 9.35 4.3 12s.01 2.97.06 4.02c.04.86.18 1.33.3 1.64.16.41.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.64.3 1.05.05 1.37.06 4.02.06s2.97-.01 4.02-.06c.86-.04 1.33-.18 1.64-.3.41-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.64.05-1.05.06-1.37.06-4.02s-.01-2.97-.06-4.02c-.04-.86-.18-1.33-.3-1.64a2.7 2.7 0 0 0-.66-1.02 2.7 2.7 0 0 0-1.02-.66c-.31-.12-.78-.26-1.64-.3C14.97 4.31 14.65 4.3 12 4.3zm0 3.4a4.3 4.3 0 1 1 0 8.6 4.3 4.3 0 0 1 0-8.6zm0 1.8a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zm5.47-2.02a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+        </a>
+        <a href="https://g.page/r/CQf7SXEIuAEXEAE/review" target="_blank" rel="noopener" aria-label="Google Reviews">
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.5 12.27c0-.79-.07-1.54-.2-2.27H12v4.3h6.46c-.28 1.5-1.13 2.77-2.4 3.62v3h3.88c2.27-2.09 3.56-5.17 3.56-8.65z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.07 7.94-2.9l-3.88-3c-1.07.72-2.45 1.15-4.06 1.15-3.13 0-5.78-2.11-6.73-4.96H1.27v3.11A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.27 14.29A7.2 7.2 0 0 1 4.9 12c0-.79.14-1.57.37-2.29V6.6H1.27A12 12 0 0 0 0 12c0 1.94.46 3.77 1.27 5.4z"/><path fill="#EA4335" d="M12 4.75c1.76 0 3.35.61 4.6 1.8l3.44-3.44C17.94 1.19 15.24 0 12 0 7.31 0 3.26 2.69 1.27 6.6l4 3.11C6.22 6.86 8.87 4.75 12 4.75z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> GlenCrafts Lenasia. All rights reserved.</p>
+      <p class="credit">Website made by <a href="https://www.codepulsewebdev.com" target="_blank" rel="noopener">CodePulse Web Developments</a></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">&#8249;</button>
+    <div class="lightbox-stage">
+      <img id="lightboxImg" src="" alt="" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">&#8250;</button>
+  </div>
+
+  <!-- CATEGORY MODAL -->
+  <div class="cat-modal" id="catModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cat-modal-header">
+      <h2 id="catModalTitle"></h2>
+      <button class="cat-modal-close" id="catModalClose" aria-label="Close gallery">&times;</button>
+    </div>
+    <div class="cat-modal-grid" id="catModalGrid"></div>
+  </div>
+
+  <script>
+    /* ===== ALL JAVASCRIPT HERE ===== */
+    (function() {
+      "use strict";
+
+      var GALLERY = {
+        "parcels-kunchas": {
+          "label": "Parcels & Kunchas",
+          "images": [
+            { "src": "images/parcels kunchas.jpg", "title": "Parcels Kunchas" },
+            { "src": "images/parcels kunchas 2.jpg", "title": "Parcels Kunchas 2" },
+            { "src": "images/parcels kunchas 3.jpg", "title": "Parcels Kunchas 3" },
+            { "src": "images/parcels kunchas 4.jpg", "title": "Parcels Kunchas 4" },
+            { "src": "images/parcels kunchas 5.jpg", "title": "Parcels Kunchas 5" },
+            { "src": "images/parcels kunchas 6.jpg", "title": "Parcels Kunchas 6" },
+            { "src": "images/parcels kunchas 7.jpg", "title": "Parcels Kunchas 7" },
+            { "src": "images/parcels kunchas 8.jpg", "title": "Parcels Kunchas 8" },
+            { "src": "images/parcels kunchas 9.jpg", "title": "Parcels Kunchas 9" },
+            { "src": "images/parcels kunchas 10.jpg", "title": "Parcels Kunchas 10" },
+            { "src": "images/parcels kunchas 11.jpg", "title": "Parcels Kunchas 11" },
+            { "src": "images/parcels kunchas 12.jpg", "title": "Parcels Kunchas 12" },
+            { "src": "images/parcels kunchas 13.jpg", "title": "Parcels Kunchas 13" },
+            { "src": "images/parcels kunchas 14.jpg", "title": "Parcels Kunchas 14" },
+            { "src": "images/parcels kunchas 15.jpg", "title": "Parcels Kunchas 15" },
+            { "src": "images/parcels kunchas 16.jpg", "title": "Parcels Kunchas 16" }
+          ]
+        },
+        "baby-gifting": {
+          "label": "Baby Gifting",
+          "images": [
+            { "src": "images/baby gifting.jpg", "title": "Baby Gifting" },
+            { "src": "images/baby gifting 2.jpg", "title": "Baby Gifting 2" },
+            { "src": "images/baby gifting 3.jpg", "title": "Baby Gifting 3" },
+            { "src": "images/baby gifting 4.jpg", "title": "Baby Gifting 4" },
+            { "src": "images/baby gifting 5.jpg", "title": "Baby Gifting 5" },
+            { "src": "images/baby gifting 6.jpg", "title": "Baby Gifting 6" },
+            { "src": "images/baby gifting 7.jpg", "title": "Baby Gifting 7" },
+            { "src": "images/baby gifting 8.jpg", "title": "Baby Gifting 8" },
+            { "src": "images/baby gifting girl 9.jpg", "title": "Baby Gifting Girl" },
+            { "src": "images/baby gifting boy 10.jpg", "title": "Baby Gifting Boy" }
+          ]
+        },
+        "parcel-boxes": {
+          "label": "Parcel Boxes",
+          "images": [
+            { "src": "images/parcel boxes.jpg", "title": "Parcel Boxes" },
+            { "src": "images/parcel boxes 2.jpg", "title": "Parcel Boxes 2" },
+            { "src": "images/parcel boxes3.jpg", "title": "Parcel Boxes 3" },
+            { "src": "images/parcel boxes 4.jpg", "title": "Parcel Boxes 4" },
+            { "src": "images/parcel boxes 5.jpg", "title": "Parcel Boxes 5" },
+            { "src": "images/parcel boxes 6.jpg", "title": "Parcel Boxes 6" },
+            { "src": "images/parcel boxes 7.jpg", "title": "Parcel Boxes 7" },
+            { "src": "images/parcel boxes 8.jpg", "title": "Parcel Boxes 8" },
+            { "src": "images/parcel boxes 9.jpg", "title": "Parcel Boxes 9" },
+            { "src": "images/parcel boxes 10.jpg", "title": "Parcel Boxes 10" }
+          ]
+        },
+        "eid-gifting": {
+          "label": "Eid Gifting",
+          "images": [
+            { "src": "images/eid gifting.jpg", "title": "Eid Gifting" },
+            { "src": "images/eid gifting 2.jpg", "title": "Eid Gifting 2" },
+            { "src": "images/eid gifting 3.jpg", "title": "Eid Gifting 3" },
+            { "src": "images/eid gifting 4.jpg", "title": "Eid Gifting 4" },
+            { "src": "images/eid gifting 5.jpg", "title": "Eid Gifting 5" },
+            { "src": "images/eid gifting 6.jpg", "title": "Eid Gifting 6" },
+            { "src": "images/eid gifting 7.jpg", "title": "Eid Gifting 7" }
+          ]
+        },
+        "dutch-pour-frame": {
+          "label": "Dutch Pour Frame",
+          "images": [
+            { "src": "images/dutch pour frame.jpg", "title": "Dutch Pour Frame" },
+            { "src": "images/dutch pour frame 2.jpg", "title": "Dutch Pour Frame 2" },
+            { "src": "images/dutch pour frame 3.jpg", "title": "Dutch Pour Frame 3" },
+            { "src": "images/dutch pour frame 4.jpg", "title": "Dutch Pour Frame 4" },
+            { "src": "images/dutch pour frame 5.jpg", "title": "Dutch Pour Frame 5" },
+            { "src": "images/dutch pour frame 6.jpg", "title": "Dutch Pour Frame 6" },
+            { "src": "images/dutch pour frame 7.jpg", "title": "Dutch Pour Frame 7" }
+          ]
+        },
+        "ring-nikkah": {
+          "label": "Ring & Nikkah",
+          "images": [
+            { "src": "images/ring nikkah.jpg", "title": "Ring Nikkah" },
+            { "src": "images/ring nikkah 2.jpg", "title": "Ring Nikkah 2" },
+            { "src": "images/ring nikkah 3.jpg", "title": "Ring Nikkah 3" },
+            { "src": "images/ring nikkah 4.jpg", "title": "Ring Nikkah 4" },
+            { "src": "images/ring nikkah 5.jpg", "title": "Ring Nikkah 5" }
+          ]
+        },
+        "quran-yaseen": {
+          "label": "Quran & Yaseen",
+          "images": [
+            { "src": "images/quran yaseen.jpg", "title": "Quran Yaseen" },
+            { "src": "images/quran yaseen 2.jpg", "title": "Quran Yaseen 2" },
+            { "src": "images/quran yaseen 3.jpg", "title": "Quran Yaseen 3" },
+            { "src": "images/quran yaseen 4.jpg", "title": "Quran Yaseen 4" },
+            { "src": "images/quran yaseen 5.jpg", "title": "Quran Yaseen 5" }
+          ]
+        },
+        "decor": {
+          "label": "Decor",
+          "images": [
+            { "src": "images/decor.jpg", "title": "Decor" },
+            { "src": "images/decor2.jpg", "title": "Decor 2" },
+            { "src": "images/decor3.jpg", "title": "Decor 3" },
+            { "src": "images/decor4.jpg", "title": "Decor 4" }
+          ]
+        },
+        "musallah-stand": {
+          "label": "Musallah Stand",
+          "images": [
+            { "src": "images/musallah stand.jpg", "title": "Musallah Stand" },
+            { "src": "images/musallah stand 2.jpg", "title": "Musallah Stand 2" }
+          ]
+        }
+      };
+
+      var CATEGORY_ORDER = Object.keys(GALLERY);
+      var WHATSAPP_NUMBER = "27785659464";
+
+      var navToggle = document.getElementById("navToggle");
+      var mainNav = document.getElementById("main-nav");
+
+      if (navToggle) {
+        navToggle.addEventListener("click", function() {
+          var isOpen = mainNav.classList.toggle("open");
+          navToggle.classList.toggle("open", isOpen);
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        mainNav.addEventListener("click", function(e) {
+          if (e.target.tagName === "A") {
+            mainNav.classList.remove("open");
+            navToggle.classList.remove("open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      var galleryRoot = document.getElementById("galleryCategories");
+
+      if (galleryRoot) {
+        function buildTile(img, index, catSlug) {
+          var btn = document.createElement("button");
+          btn.className = "gallery-tile";
+          btn.type = "button";
+          btn.setAttribute("aria-label", "View " + img.title);
+          btn.dataset.cat = catSlug;
+          btn.dataset.index = String(index);
+
+          var image = document.createElement("img");
+          image.src = img.src;
+          image.alt = img.title;
+          image.loading = "lazy";
+          image.decoding = "async";
+          btn.appendChild(image);
+
+          btn.addEventListener("click", function() {
+            openLightbox(catSlug, index);
+          });
+          return btn;
+        }
+
+        CATEGORY_ORDER.forEach(function(slug) {
+          var cat = GALLERY[slug];
+          var section = document.createElement("div");
+          section.className = "gallery-category";
+
+          var head = document.createElement("div");
+          head.className = "gallery-category-head";
+          head.innerHTML = "<h3>" + cat.label + "</h3>";
+          section.appendChild(head);
+
+          var grid = document.createElement("div");
+          grid.className = "gallery-grid";
+
+          var hasMore = cat.images.length > 4;
+
+          if (hasMore) {
+            grid.classList.add("has-more");
+
+            cat.images.slice(0, 4).forEach(function(img, i) {
+              grid.appendChild(buildTile(img, i, slug));
+            });
+
+            var more = document.createElement("button");
+            more.type = "button";
+            more.className = "gallery-tile see-more";
+            more.textContent = "See More";
+            more.setAttribute("aria-label", "See all " + cat.label + " photos");
+            more.addEventListener("click", function() {
+              openCategoryModal(slug);
+            });
+            grid.appendChild(more);
+          } else {
+            cat.images.forEach(function(img, i) {
+              grid.appendChild(buildTile(img, i, slug));
+            });
+          }
+
+          section.appendChild(grid);
+          galleryRoot.appendChild(section);
+        });
+      }
+
+      var catModal = document.getElementById("catModal");
+      var catModalTitle = document.getElementById("catModalTitle");
+      var catModalGrid = document.getElementById("catModalGrid");
+      var catModalClose = document.getElementById("catModalClose");
+      var activeCatSlug = null;
+
+      function openCategoryModal(slug) {
+        if (!catModal) return;
+        activeCatSlug = slug;
+        var cat = GALLERY[slug];
+        catModalTitle.textContent = cat.label;
+        catModalGrid.innerHTML = "";
+
+        cat.images.forEach(function(img, i) {
+          var tile = document.createElement("button");
+          tile.type = "button";
+          tile.className = "cat-tile";
+          tile.setAttribute("aria-label", "View " + img.title);
+
+          var thumb = document.createElement("div");
+          thumb.className = "cat-tile-img";
+          var image = document.createElement("img");
+          image.src = img.src;
+          image.alt = img.title;
+          image.loading = "lazy";
+          image.decoding = "async";
+          thumb.appendChild(image);
+
+          var title = document.createElement("p");
+          title.className = "cat-tile-title";
+          title.textContent = img.title;
+
+          tile.appendChild(thumb);
+          tile.appendChild(title);
+
+          tile.addEventListener("click", function() {
+            openLightbox(slug, i);
+          });
+
+          catModalGrid.appendChild(tile);
+        });
+
+        catModal.classList.add("active");
+        catModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        pushModalHistory("category");
+      }
+
+      function closeCategoryModal(skipHistory) {
+        if (!catModal) return;
+        catModal.classList.remove("active");
+        catModal.setAttribute("aria-hidden", "true");
+        if (!lightbox.classList.contains("active")) {
+          document.body.classList.remove("modal-open");
+        }
+        if (!skipHistory) popModalHistoryIfNeeded("category");
+      }
+
+      if (catModalClose) {
+        catModalClose.addEventListener("click", function() { closeCategoryModal(); });
+        catModal.addEventListener("click", function(e) {
+          if (e.target === catModal) closeCategoryModal();
+        });
+      }
+
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImg = document.getElementById("lightboxImg");
+      var lightboxCaption = document.getElementById("lightboxCaption");
+      var lightboxClose = document.getElementById("lightboxClose");
+      var lightboxPrev = document.getElementById("lightboxPrev");
+      var lightboxNext = document.getElementById("lightboxNext");
+      var activeIndex = 0;
+
+      function renderLightbox() {
+        var cat = GALLERY[activeCatSlug];
+        var img = cat.images[activeIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.title;
+        lightboxCaption.textContent = img.title;
+      }
+
+      function openLightbox(slug, index) {
+        if (!lightbox) return;
+        activeCatSlug = slug;
+        activeIndex = index;
+        renderLightbox();
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        pushModalHistory("lightbox");
+      }
+
+      function closeLightbox(skipHistory) {
+        if (!lightbox) return;
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImg.classList.remove("zoomed");
+        if (!catModal.classList.contains("active")) {
+          document.body.classList.remove("modal-open");
+        }
+        if (!skipHistory) popModalHistoryIfNeeded("lightbox");
+      }
+
+      function showPrev() {
+        var cat = GALLERY[activeCatSlug];
+        activeIndex = (activeIndex - 1 + cat.images.length) % cat.images.length;
+        renderLightbox();
+      }
+
+      function showNext() {
+        var cat = GALLERY[activeCatSlug];
+        activeIndex = (activeIndex + 1) % cat.images.length;
+        renderLightbox();
+      }
+
+      if (lightboxClose) {
+        lightboxClose.addEventListener("click", function() { closeLightbox(); });
+        lightboxPrev.addEventListener("click", showPrev);
+        lightboxNext.addEventListener("click", showNext);
+        lightbox.addEventListener("click", function(e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+        lightboxImg.addEventListener("click", function() {
+          lightboxImg.classList.toggle("zoomed");
+        });
+
+        document.addEventListener("keydown", function(e) {
+          if (!lightbox.classList.contains("active")) return;
+          if (e.key === "Escape") closeLightbox();
+          if (e.key === "ArrowLeft") showPrev();
+          if (e.key === "ArrowRight") showNext();
+        });
+      }
+
+      function pushModalHistory(kind) {
+        history.pushState({ glamcraftModal: kind }, "");
+      }
+
+      function popModalHistoryIfNeeded(kind) {
+        if (history.state && history.state.glamcraftModal === kind) {
+          history.back();
+        }
+      }
+
+      window.addEventListener("popstate", function() {
+        if (lightbox && lightbox.classList.contains("active")) {
+          closeLightbox(true);
+          return;
+        }
+        if (catModal && catModal.classList.contains("active")) {
+          closeCategoryModal(true);
+        }
+      });
+
+      var form = document.getElementById("enquiryForm");
+      if (form) {
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          var name = form.name.value.trim();
+          var surname = form.surname.value.trim();
+          var phone = form.phone.value.trim();
+          var message = form.message.value.trim();
+
+          var text =
+            "Hi GlenCrafts Lenasia, I'd like to make an enquiry.\n\n" +
+            "Name: " + name + " " + surname + "\n" +
+            "Phone: " + phone + "\n" +
+            "Message: " + message;
+
+          var url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(text);
+          window.open(url, "_blank", "noopener");
+        });
+      }
+
+      var yearEl = document.getElementById("year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+    })();
+  </script>
+
+</body>
+</html>
