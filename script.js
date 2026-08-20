@@ -1,5 +1,5 @@
 /* ============================================================
-   GlamCraft Lenasia — script.js
+   Glamcrafts Lenasia — script.js
    ============================================================ */
 
 (function() {
@@ -9,112 +9,120 @@
     "parcels-kunchas": {
       "label": "Parcels & Kunchas",
       "images": [
-        { "src": "images/parcels kunchas.jpg", "title": "Parcels Kunchas" },
-        { "src": "images/parcels kunchas 2.jpg", "title": "Parcels Kunchas 2" },
-        { "src": "images/parcels kunchas 3.jpg", "title": "Parcels Kunchas 3" },
-        { "src": "images/parcels kunchas 4.jpg", "title": "Parcels Kunchas 4" },
-        { "src": "images/parcels kunchas 5.jpg", "title": "Parcels Kunchas 5" },
-        { "src": "images/parcels kunchas 6.jpg", "title": "Parcels Kunchas 6" },
-        { "src": "images/parcels kunchas 7.jpg", "title": "Parcels Kunchas 7" },
-        { "src": "images/parcels kunchas 8.jpg", "title": "Parcels Kunchas 8" },
-        { "src": "images/parcels kunchas 9.jpg", "title": "Parcels Kunchas 9" },
-        { "src": "images/parcels kunchas 10.jpg", "title": "Parcels Kunchas 10" },
-        { "src": "images/parcels kunchas 11.jpg", "title": "Parcels Kunchas 11" },
-        { "src": "images/parcels kunchas 12.jpg", "title": "Parcels Kunchas 12" },
-        { "src": "images/parcels kunchas 13.jpg", "title": "Parcels Kunchas 13" },
-        { "src": "images/parcels kunchas 14.jpg", "title": "Parcels Kunchas 14" },
-        { "src": "images/parcels kunchas 15.jpg", "title": "Parcels Kunchas 15" },
-        { "src": "images/parcels kunchas 16.jpg", "title": "Parcels Kunchas 16" }
+        { "src": "images/parcels kunchas.jpg" },
+        { "src": "images/parcels kunchas 2.jpg" },
+        { "src": "images/parcels kunchas 3.jpg" },
+        { "src": "images/parcels kunchas 4.jpg" },
+        { "src": "images/parcels kunchas 5.jpg" },
+        { "src": "images/parcels kunchas 6.jpg" },
+        { "src": "images/parcels kunchas 7.jpg" },
+        { "src": "images/parcels kunchas 8.jpg" },
+        { "src": "images/parcels kunchas 9.jpg" },
+        { "src": "images/parcels kunchas 10.jpg" },
+        { "src": "images/parcels kunchas 11.jpg" },
+        { "src": "images/parcels kunchas 12.jpg" },
+        { "src": "images/parcels kunchas 13.jpg" },
+        { "src": "images/parcels kunchas 14.jpg" },
+        { "src": "images/parcels kunchas 15.jpg" },
+        { "src": "images/parcels kunchas 16.jpg" }
       ]
     },
     "baby-gifting": {
-  "label": "Baby Gifting",
-  "images": [
-    { "src": "images/baby gifting.jpg", "title": "Baby Gifting" },
-    { "src": "images/baby gifting 2.jpg", "title": "Baby Gifting 2" },
-    { "src": "images/baby gifting 3.jpg", "title": "Baby Gifting 3" },
-    { "src": "images/baby gifting 4.jpg", "title": "Baby Gifting 4" },
-    { "src": "images/baby gifting 5.jpg", "title": "Baby Gifting 5" },
-    { "src": "images/baby gifting 6.jpg", "title": "Baby Gifting 6" },
-    { "src": "images/baby gifting 7.jpg", "title": "Baby Gifting 7" },
-    { "src": "images/baby gifting 8.jpg", "title": "Baby Gifting 8" },
-    { "src": "images/baby gifting girl 9.jpg", "title": "Baby Gifting Girl" },
-    { "src": "images/baby gifting boy 10.jpg", "title": "Baby Gifting Boy" }
-  ]
-}
+      "label": "Baby Gifting",
+      "images": [
+        { "src": "images/baby gifting.jpg" },
+        { "src": "images/baby gifting 2.jpg" },
+        { "src": "images/baby gifting 3.jpg" },
+        { "src": "images/baby gifting 4.jpg" },
+        { "src": "images/baby gifting 5.jpg" },
+        { "src": "images/baby gifting 6.jpg" },
+        { "src": "images/baby gifting 7.jpg" },
+        { "src": "images/baby gifting 8.jpg" },
+        { "src": "images/baby gifting girl 9.jpg" },
+        { "src": "images/baby gifting boy 10.jpg" }
+      ]
+    },  // <-- FIXED: Added missing comma here
     "parcel-boxes": {
       "label": "Parcel Boxes",
       "images": [
-        { "src": "images/parcel boxes.jpg", "title": "Parcel Boxes" },
-        { "src": "images/parcel boxes 2.jpg", "title": "Parcel Boxes 2" },
-        { "src": "images/parcel boxes3.jpg", "title": "Parcel Boxes 3" },
-        { "src": "images/parcel boxes 4.jpg", "title": "Parcel Boxes 4" },
-        { "src": "images/parcel boxes 5.jpg", "title": "Parcel Boxes 5" },
-        { "src": "images/parcel boxes 6.jpg", "title": "Parcel Boxes 6" },
-        { "src": "images/parcel boxes 7.jpg", "title": "Parcel Boxes 7" },
-        { "src": "images/parcel boxes 8.jpg", "title": "Parcel Boxes 8" },
-        { "src": "images/parcel boxes 9.jpg", "title": "Parcel Boxes 9" },
-        { "src": "images/parcel boxes 10.jpg", "title": "Parcel Boxes 10" }
+        { "src": "images/parcel boxes.jpg" },
+        { "src": "images/parcel boxes 2.jpg" },
+        { "src": "images/parcel boxes3.jpg" },
+        { "src": "images/parcel boxes 4.jpg" },
+        { "src": "images/parcel boxes 5.jpg" },
+        { "src": "images/parcel boxes 6.jpg" },
+        { "src": "images/parcel boxes 7.jpg" },
+        { "src": "images/parcel boxes 8.jpg" },
+        { "src": "images/parcel boxes 9.jpg" },
+        { "src": "images/parcel boxes 10.jpg" }
       ]
     },
     "eid-gifting": {
       "label": "Eid Gifting",
       "images": [
-        { "src": "images/eid gifting.jpg", "title": "Eid Gifting" },
-        { "src": "images/eid gifting 2.jpg", "title": "Eid Gifting 2" },
-        { "src": "images/eid gifting 3.jpg", "title": "Eid Gifting 3" },
-        { "src": "images/eid gifting 4.jpg", "title": "Eid Gifting 4" },
-        { "src": "images/eid gifting 5.jpg", "title": "Eid Gifting 5" },
-        { "src": "images/eid gifting 6.jpg", "title": "Eid Gifting 6" },
-        { "src": "images/eid gifting 7.jpg", "title": "Eid Gifting 7" }
+        { "src": "images/eid gifting.jpg" },
+        { "src": "images/eid gifting 2.jpg" },
+        { "src": "images/eid gifting 3.jpg" },
+        { "src": "images/eid gifting 4.jpg" },
+        { "src": "images/eid gifting 5.jpg" },
+        { "src": "images/eid gifting 6.jpg" },
+        { "src": "images/eid gifting 7.jpg" }
       ]
     },
     "dutch-pour-frame": {
       "label": "Dutch Pour Frame",
       "images": [
-        { "src": "images/dutch pour frame.jpg", "title": "Dutch Pour Frame" },
-        { "src": "images/dutch pour frame 2.jpg", "title": "Dutch Pour Frame 2" },
-        { "src": "images/dutch pour frame 3.jpg", "title": "Dutch Pour Frame 3" },
-        { "src": "images/dutch pour frame 4.jpg", "title": "Dutch Pour Frame 4" },
-        { "src": "images/dutch pour frame 5.jpg", "title": "Dutch Pour Frame 5" },
-        { "src": "images/dutch pour frame 6.jpg", "title": "Dutch Pour Frame 6" },
-        { "src": "images/dutch pour frame 7.jpg", "title": "Dutch Pour Frame 7" }
+        { "src": "images/dutch pour frame.jpg" },
+        { "src": "images/dutch pour frame 2.jpg" },
+        { "src": "images/dutch pour frame 3.jpg" },
+        { "src": "images/dutch pour frame 4.jpg" },
+        { "src": "images/dutch pour frame 5.jpg" },
+        { "src": "images/dutch pour frame 6.jpg" },
+        { "src": "images/dutch pour frame 7.jpg" }
       ]
     },
     "ring-nikkah": {
       "label": "Ring & Nikkah",
       "images": [
-        { "src": "images/ring nikkah.jpg", "title": "Ring Nikkah" },
-        { "src": "images/ring nikkah 2.jpg", "title": "Ring Nikkah 2" },
-        { "src": "images/ring nikkah 3.jpg", "title": "Ring Nikkah 3" },
-        { "src": "images/ring nikkah 4.jpg", "title": "Ring Nikkah 4" },
-        { "src": "images/ring nikkah 5.jpg", "title": "Ring Nikkah 5" }
+        { "src": "images/ring nikkah.jpg" },
+        { "src": "images/ring nikkah 2.jpg" },
+        { "src": "images/ring nikkah 3.jpg" },
+        { "src": "images/ring nikkah 4.jpg" },
+        { "src": "images/ring nikkah 5.jpg" }
       ]
     },
     "quran-yaseen": {
       "label": "Quran & Yaseen",
       "images": [
-        { "src": "images/quran yaseen.jpg", "title": "Quran Yaseen" },
-        { "src": "images/quran yaseen 2.jpg", "title": "Quran Yaseen 2" },
-        { "src": "images/quran yaseen 3.jpg", "title": "Quran Yaseen 3" },
-        { "src": "images/quran yaseen 4.jpg", "title": "Quran Yaseen 4" },
-        { "src": "images/quran yaseen 5.jpg", "title": "Quran Yaseen 5" }
+        { "src": "images/quran yaseen.jpg" },
+        { "src": "images/quran yaseen 2.jpg" },
+        { "src": "images/quran yaseen 3.jpg" },
+        { "src": "images/quran yaseen 4.jpg" },
+        { "src": "images/quran yaseen 5.jpg" }
       ]
     },
     "decor": {
       "label": "Decor",
       "images": [
-        { "src": "images/decor.jpg", "title": "Decor" },
-        { "src": "images/decor2.jpg", "title": "Decor 2" },
-        { "src": "images/decor3.jpg", "title": "Decor 3" },
-        { "src": "images/decor4.jpg", "title": "Decor 4" }
+        { "src": "images/decor.jpg" },
+        { "src": "images/decor2.jpg" },
+        { "src": "images/decor3.jpg" },
+        { "src": "images/decor4.jpg" }
       ]
     },
     "musallah-stand": {
       "label": "Musallah Stand",
       "images": [
-        { "src": "images/musallah stand.jpg", "title": "Musallah Stand" },
-        { "src": "images/musallah stand 2.jpg", "title": "Musallah Stand 2" }
+        { "src": "images/musallah stand.jpg" },
+        { "src": "images/musallah stand 2.jpg" }
+      ]
+    },
+    "school-projects": {
+      "label": "School Projects",
+      "images": [
+        { "src": "images/school projects mineshaft headgear.jpg" },
+        { "src": "images/school projects electromagnetic crane.jpg" },
+        { "src": "images/school projects house with buzzer and light.jpg" }
       ]
     }
   };
@@ -169,13 +177,13 @@
       var btn = document.createElement("button");
       btn.className = "gallery-tile";
       btn.type = "button";
-      btn.setAttribute("aria-label", "View " + img.title);
+      btn.setAttribute("aria-label", "View image");
       btn.dataset.cat = catSlug;
       btn.dataset.index = String(index);
 
       var image = document.createElement("img");
       image.src = img.src;
-      image.alt = img.title;
+      image.alt = "";
       image.loading = "lazy";
       image.decoding = "async";
       btn.appendChild(image);
@@ -248,23 +256,18 @@
       var tile = document.createElement("button");
       tile.type = "button";
       tile.className = "cat-tile";
-      tile.setAttribute("aria-label", "View " + img.title);
+      tile.setAttribute("aria-label", "View image");
 
       var thumb = document.createElement("div");
       thumb.className = "cat-tile-img";
       var image = document.createElement("img");
       image.src = img.src;
-      image.alt = img.title;
+      image.alt = "";
       image.loading = "lazy";
       image.decoding = "async";
       thumb.appendChild(image);
 
-      var title = document.createElement("p");
-      title.className = "cat-tile-title";
-      title.textContent = img.title;
-
       tile.appendChild(thumb);
-      tile.appendChild(title);
 
       tile.addEventListener("click", function() {
         openLightbox(slug, i);
@@ -301,7 +304,6 @@
      ----------------------------------------------------------- */
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightboxImg");
-  var lightboxCaption = document.getElementById("lightboxCaption");
   var lightboxClose = document.getElementById("lightboxClose");
   var lightboxPrev = document.getElementById("lightboxPrev");
   var lightboxNext = document.getElementById("lightboxNext");
@@ -311,8 +313,7 @@
     var cat = GALLERY[activeCatSlug];
     var img = cat.images[activeIndex];
     lightboxImg.src = img.src;
-    lightboxImg.alt = img.title;
-    lightboxCaption.textContent = img.title;
+    lightboxImg.alt = "";
   }
 
   function openLightbox(slug, index) {
@@ -404,7 +405,7 @@
       var message = form.message.value.trim();
 
       var text =
-        "Hi GlenCrafts Lenasia, I'd like to make an enquiry.\n\n" +
+        "Hi Glamcrafts Lenasia, I'd like to make an enquiry.\n\n" +
         "Name: " + name + " " + surname + "\n" +
         "Phone: " + phone + "\n" +
         "Message: " + message;
