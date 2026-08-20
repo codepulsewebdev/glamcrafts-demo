@@ -1745,22 +1745,24 @@
         pushModalHistory("lightbox");
       }
 
-      function closeLightbox(skipHistory) {
-        if (!lightbox) return;
-        lightbox.classList.remove("active");
-        lightbox.setAttribute("aria-hidden", "true");
-        lightboxImg.classList.remove("zoomed");
-        if (!catModal.classList.contains("active")) {
-          document.body.classList.remove("modal-open");
-        }
-        if (!skipHistory) popModalHistoryIfNeeded("lightbox");
-      }
+     function closeLightbox(skipHistory) {
+  if (!lightbox) return;
 
-      function showPrev() {
-        var cat = GALLERY[activeCatSlug];
-        activeIndex = (activeIndex - 1 + cat.images.length) % cat.images.length;
-        renderLightbox();
-      }
+  lightbox.classList.remove("active");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImg.classList.remove("zoomed");
+
+  // If the category modal is open, stay there.
+  if (catModal && catModal.classList.contains("active")) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
+  }
+
+  if (!skipHistory) {
+    popModalHistoryIfNeeded("lightbox");
+  }
+}
 
       function showNext() {
         var cat = GALLERY[activeCatSlug];
