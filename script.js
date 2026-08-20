@@ -41,7 +41,7 @@
         { "src": "images/baby gifting girl 9.jpg" },
         { "src": "images/baby gifting boy 10.jpg" }
       ]
-    },  // <-- FIXED: Added missing comma here
+    },
     "parcel-boxes": {
       "label": "Parcel Boxes",
       "images": [
@@ -332,10 +332,18 @@
     lightbox.classList.remove("active");
     lightbox.setAttribute("aria-hidden", "true");
     lightboxImg.classList.remove("zoomed");
+    
+    // Only remove body class if category modal is also closed
     if (!catModal.classList.contains("active")) {
       document.body.classList.remove("modal-open");
     }
-    if (!skipHistory) popModalHistoryIfNeeded("lightbox");
+    
+    if (!skipHistory) {
+      // Go back to category modal state
+      if (history.state && history.state.glamcraftModal === "lightbox") {
+        history.back();
+      }
+    }
   }
 
   function showPrev() {
@@ -383,10 +391,12 @@
   }
 
   window.addEventListener("popstate", function() {
+    // If lightbox is open, close it and return (don't close category)
     if (lightbox && lightbox.classList.contains("active")) {
       closeLightbox(true);
       return;
     }
+    // If only category modal is open, close it
     if (catModal && catModal.classList.contains("active")) {
       closeCategoryModal(true);
     }
