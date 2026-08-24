@@ -122,7 +122,8 @@
       "images": [
         { "src": "images/school projects mineshaft headgear.jpg" },
         { "src": "images/school projects electromagnetic crane.jpg" },
-        { "src": "images/school projects house with buzzer and light.jpg" }
+        { "src": "images/school projects house with buzzer and light.jpg" },
+        { "src": "images/home-kits.png" }
       ]
     }
   };
