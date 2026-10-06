@@ -174,66 +174,10 @@
   var galleryRoot = document.getElementById("galleryCategories");
 
   if (galleryRoot) {
-    function buildTile(img, index, catSlug) {
-      var btn = document.createElement("button");
-      btn.className = "gallery-tile";
-      btn.type = "button";
-      btn.setAttribute("aria-label", "View image");
-      btn.dataset.cat = catSlug;
-      btn.dataset.index = String(index);
-
-      var image = document.createElement("img");
-      image.src = img.src;
-      image.alt = "";
-      image.loading = "lazy";
-      image.decoding = "async";
-      btn.appendChild(image);
-
-      btn.addEventListener("click", function() {
-        openLightbox(catSlug, index);
+    galleryRoot.querySelectorAll("button[data-cat]").forEach(function(button) {
+      button.addEventListener("click", function() {
+        openLightbox(button.dataset.cat, Number(button.dataset.index));
       });
-      return btn;
-    }
-
-    CATEGORY_ORDER.forEach(function(slug) {
-      var cat = GALLERY[slug];
-      var section = document.createElement("div");
-      section.className = "gallery-category";
-
-      var head = document.createElement("div");
-      head.className = "gallery-category-head";
-      head.innerHTML = "<h3>" + cat.label + "</h3>";
-      section.appendChild(head);
-
-      var grid = document.createElement("div");
-      grid.className = "gallery-grid";
-
-      var hasMore = cat.images.length > 4;
-
-      if (hasMore) {
-        grid.classList.add("has-more");
-
-        cat.images.slice(0, 4).forEach(function(img, i) {
-          grid.appendChild(buildTile(img, i, slug));
-        });
-
-        var more = document.createElement("button");
-        more.type = "button";
-        more.className = "gallery-tile see-more";
-        more.textContent = "See More";
-        more.setAttribute("aria-label", "See all " + cat.label + " photos");
-        more.addEventListener("click", function() {
-          openCategoryModal(slug);
-        });
-        grid.appendChild(more);
-      } else {
-        cat.images.forEach(function(img, i) {
-          grid.appendChild(buildTile(img, i, slug));
-        });
-      }
-
-      section.appendChild(grid);
-      galleryRoot.appendChild(section);
     });
   }
 
@@ -263,7 +207,7 @@
       thumb.className = "cat-tile-img";
       var image = document.createElement("img");
       image.src = img.src;
-      image.alt = "";
+      image.alt = cat.label + " — portfolio example " + (i + 1);
       image.loading = "lazy";
       image.decoding = "async";
       thumb.appendChild(image);
@@ -314,7 +258,7 @@
     var cat = GALLERY[activeCatSlug];
     var img = cat.images[activeIndex];
     lightboxImg.src = img.src;
-    lightboxImg.alt = "";
+    lightboxImg.alt = cat.label + " — portfolio example " + (activeIndex + 1);
   }
 
   function openLightbox(slug, index) {
@@ -410,10 +354,11 @@
   if (form) {
     form.addEventListener("submit", function(e) {
       e.preventDefault();
-      var name = form.name.value.trim();
-      var surname = form.surname.value.trim();
-      var phone = form.phone.value.trim();
-      var message = form.message.value.trim();
+      if (!form.reportValidity()) return;
+      var name = form.elements.namedItem("name").value.trim();
+      var surname = form.elements.namedItem("surname").value.trim();
+      var phone = form.elements.namedItem("phone").value.trim();
+      var message = form.elements.namedItem("message").value.trim();
 
       var text =
         "Hi Glamcrafts Lenasia, I'd like to make an enquiry.\n\n" +

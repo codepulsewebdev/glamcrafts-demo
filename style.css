@@ -1210,3 +1210,6 @@ body.modal-open {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+/* Crawlable category portfolios */
+.service-portfolio figure{margin:0;min-width:0}.service-portfolio img{display:block;width:100%;height:280px;object-fit:contain}.service-portfolio figcaption{font-size:.85rem;padding:8px}.gallery-category-head a{color:inherit}.about-page h2{margin-top:2rem}.about-page p{margin-bottom:1rem}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
