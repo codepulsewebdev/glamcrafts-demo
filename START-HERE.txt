@@ -1,0 +1,41 @@
+GLAMCRAFTS COMPLETE WEBSITE UPDATE — 11 NOVEMBER 2026
+
+This folder contains ALL supplied website HTML pages, shared style.css,
+script.js, SEO/site support files, and the new image filename manifest.
+
+HOW TO DEPLOY
+1. Extract this ZIP.
+2. Copy every new JPG listed in NEW-IMAGE-MANIFEST.txt into the images/ folder
+   alongside your EXISTING website images. Do not delete your existing images.
+3. Upload the contents of this folder to your current website root / Netlify
+   publish folder. Keep the filenames exactly as supplied, including case.
+   IMPORTANT: do not upload an empty images folder over your existing images.
+4. Confirm homepage and category links. Clear browser cache / hard refresh.
+
+WHAT CHANGED
+- New photos first in their respective category pages and homepage previews.
+- First 3 thumbnails + See More on desktop, 1 photo + See More on mobile.
+- Uniform square thumbnail frames; full image visible (not cropped) on category
+  detail pages. Click to enlarge.
+- Dramatically darker/bolder homepage and secondary-page text.
+- Removed floating bubble DOM; introduced clean solid editorial sections.
+- Consistent well-spaced WhatsApp, studio address, gallery, related links.
+- CodePulse Web Developments credit clickable on ALL pages.
+- Existing old photos, website text, navigation, form, and business contact kept.
+- Added lazy loading to offscreen photos, low image fetch priority, SEO image
+  metadata and sitemap entries.
+
+IMPORTANT LIMITATION
+Actual JPG photos were NOT supplied in this chat (only filenames). Therefore
+this ZIP contains HTML/CSS/JS only, not the image contents. We cannot resize,
+compress or verify the JPGs themselves. For best speed, compress any multi-MB
+photos before upload (particularly the 6.5MB and 3.3MB Kunchas files) and retain
+exact filenames, ideally under ~300KB per photo when quality permits.
+
+FILENAMES
+The names in the message have linebreaks/spaces from file-list copying. We
+standardised them to Screenshot_20261111_HHMMSS_Instagram.jpg.
+Ensure actual names match the manifest exactly (case sensitive on hosting).
+
+
+UPDATE V3: The ORIGINAL Glamcrafts 20 floating bubbles and CSS motion are back on ALL 12 pages. The About Us image remains the Gift Parcels & Kunchas photo. This fixes the missing HTML bubble elements and lets them show through redesigned section backgrounds.

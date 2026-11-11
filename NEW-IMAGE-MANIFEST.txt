@@ -1,0 +1,53 @@
+GLAMCRAFTS | New images required in the images/ folder
+
+parcels-kunchas (Gift Parcels & Kunchas)
+  Screenshot_20261111_123313_Instagram.jpg
+  Screenshot_20261111_123326_Instagram.jpg
+  Screenshot_20261111_123328_Instagram.jpg
+  Screenshot_20261111_123331_Instagram.jpg
+  Screenshot_20261111_123333_Instagram.jpg
+  Screenshot_20261111_123336_Instagram.jpg
+  Screenshot_20261111_123340_Instagram.jpg
+  Screenshot_20261111_123343_Instagram.jpg
+  Screenshot_20261111_123346_Instagram.jpg
+  Screenshot_20261111_123358_Instagram.jpg
+  Screenshot_20261111_123401_Instagram.jpg
+  Screenshot_20261111_123404_Instagram.jpg
+  Screenshot_20261111_123407_Instagram.jpg
+  Screenshot_20261111_123414_Instagram.jpg
+  Screenshot_20261111_123417_Instagram.jpg
+baby-gifting (Baby Gifts & Hampers)
+  Screenshot_20261111_123443_Instagram.jpg
+  Screenshot_20261111_123447_Instagram.jpg
+  Screenshot_20261111_123450_Instagram.jpg
+  Screenshot_20261111_123453_Instagram.jpg
+  Screenshot_20261111_123455_Instagram.jpg
+  Screenshot_20261111_123458_Instagram.jpg
+parcel-boxes (Gift Parcel Boxes)
+  Screenshot_20261111_123614_Instagram.jpg
+  Screenshot_20261111_123623_Instagram.jpg
+  Screenshot_20261111_123617_Instagram.jpg
+  Screenshot_20261111_123626_Instagram.jpg
+  Screenshot_20261111_123619_Instagram.jpg
+  Screenshot_20261111_123621_Instagram.jpg
+dutch-pour-frame (Dutch Pour Art Frames)
+  Screenshot_20261111_123526_Instagram.jpg
+  Screenshot_20261111_123530_Instagram.jpg
+ring-nikkah (Nikah & Ring Parcels)
+  Screenshot_20261111_123636_Instagram.jpg
+  Screenshot_20261111_123639_Instagram.jpg
+quran-yaseen (Quran & Yaseen Gifting)
+  Screenshot_20261111_123540_Instagram.jpg
+  Screenshot_20261111_123543_Instagram.jpg
+  Screenshot_20261111_123547_Instagram.jpg
+  Screenshot_20261111_123553_Instagram.jpg
+decor (Handcrafted Décor)
+  Screenshot_20261111_123507_Instagram.jpg
+  Screenshot_20261111_123514_Instagram.jpg
+  Screenshot_20261111_123516_Instagram.jpg
+
+TOTAL: 38 JPGs
+
+Image files are not included because only filenames were provided.
+Names are assumed to use underscores and end in _Instagram.jpg exactly.
+If your actual files differ in spelling, rename the photos to match this manifest.
